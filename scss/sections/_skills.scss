@@ -1,0 +1,25 @@
+@use '../custom' as *;
+
+#skills {
+    .heading {
+        h2 {
+            color: $primary;
+        }
+    }
+
+    .progress {
+        height: 45px;
+        margin: 30px 20px;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .progress-bar {
+            h5 {
+                text-shadow: 1px 1px 1px #000;
+                margin-bottom: 3px;
+            }
+        }
+    }
+}

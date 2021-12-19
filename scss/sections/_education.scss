@@ -1,0 +1,40 @@
+@use '../custom' as *;
+
+
+#education {
+    .heading h2 {
+        color: $primary;
+        margin: 15px 0;
+    }
+
+    .education-block {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px;
+        background: $gray-100;
+        border-radius: 5px;
+        border: 1px;
+        margin-bottom: 20px;
+
+        & h5 {
+            color: $gray-600;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        & i {
+            font-size: 35px;
+        }
+
+        & h3 {
+            color: $primary;
+            margin: 15px 0;
+        }
+        
+        & h4 {
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+#experience {
+    @include gradient;
+
+    .heading {
+        h2 {
+            color: $white;
+        }
+    }
+
+    .divider {
+        background-color: $white;
+    }
+
+    .timeline {
+        padding: 30px 10px;
+        position: relative;
+
+        &:before {
+            content: " ";
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            width: 5px;
+            background: #333;
+            left: 50%;
+            margin-left: -2.5px;
+        }
+
+        &>li {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        & > li:after {
+            clear: both;
+        }
+
+        & > li:before,  & > li:after {
+            content: " ";
+            display: table;
+        }
+
+        & li {
+            list-style: none;
+
+            .timeline-badge {
+                color: $primary;
+                width: 50px;
+                line-height: 50px;
+                font-size: 20px;
+                text-align: center;
+                position: absolute;
+                top: 15px;
+                left: 50%;
+                margin-left: -25px;
+                background-color: $gray-200;
+                border-radius: 50%;
+            }
+        }
+
+        & .timeline-panel-container {
+            width: 50%;
+            float: left;
+        }
+
+        & .timeline-panel-container-inverted {
+            width: 50%;
+            float: right;
+
+            & .timeline-panel {
+                float: left;
+                margin-left: 40px;
+
+                &::after {
+                    border-left-width: 0;
+                    border-right-width: 14px;
+                    left: -14px;
+                    right: auto;
+                }
+            }
+        }
+
+        & .timeline-panel {
+            width: 90%;
+            float: right;
+            margin-right: 40px;
+            border: 1px solid $gray-200;
+            border-radius: 7px;
+            padding: 20px 25px;
+            position: relative;
+            box-shadow: 0 1px 6px rgba($color: $black, $alpha: 0.175);
+            background: $white;
+
+            &::after {
+                position: absolute;
+                top: 27px;
+                right: -14px;
+                display: inline-block;
+                border-top: 14px solid transparent;
+                border-left: 14px solid $white;
+                border-right: 0 solid $white;
+                border-bottom: 14px solid transparent;
+                content: " ";
+
+            }
+
+            .timeline-heading {
+                & h3 {
+                    margin-top: 5px;
+                    font-size: 20px;
+                }
+
+                & h4 {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

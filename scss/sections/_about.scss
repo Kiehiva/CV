@@ -1,0 +1,47 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+#about {
+    @include gradient;
+
+    .profile-picture {
+        text-align: center;
+        margin: 0 auto 30px;
+        width: 250px;
+        height: 250px;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .heading {
+        h1 {
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            & span {
+                text-transform: none;
+            }
+        }
+
+        .button-1 {
+            color: $white;
+            text-transform: uppercase;
+            border: 1px solid $white;
+            padding: 18px 50px;
+            display: inline-block;
+            border-radius: 3px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease-in 0s;
+            
+            &:hover {
+                background: $white;
+                color: $primary;
+            }
+        }
+    }
+}

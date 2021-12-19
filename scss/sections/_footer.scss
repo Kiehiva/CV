@@ -1,0 +1,21 @@
+@use '../custom' as *;
+
+footer {
+    background: $gray-800;
+    padding: 20px 0 40px;
+
+    & i {
+        color: $primary;
+        font-size: 25px;
+        line-height: 35px;
+
+        &:hover {
+            font-size: 30px;
+        }
+    }
+
+    & h5 {
+        color: $white;
+        font-weight: normal;
+    }
+}
