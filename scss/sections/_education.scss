@@ -1,5 +1,4 @@
-@use '../custom' as *;
-
+@use "../custom" as *;
 
 #education {
     .heading h2 {
@@ -17,6 +16,20 @@
         border: 1px;
         margin-bottom: 20px;
 
+        & .validation {
+            color: $white;
+            font-size: 1.5rem;
+            border: 1px solid $secondary;
+            background-color: $secondary;
+        }
+
+        & .in_process {
+            color: $white;
+            font-size: 1.5rem;
+            border: 1px solid $primary;
+            background-color: $primary;
+        }
+
         & h5 {
             color: $gray-600;
             font-size: 15px;
@@ -31,7 +44,7 @@
             color: $primary;
             margin: 15px 0;
         }
-        
+
         & h4 {
             margin-bottom: 20px;
             font-weight: 400;
